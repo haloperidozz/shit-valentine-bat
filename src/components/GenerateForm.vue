@@ -4,6 +4,8 @@ import { ref } from 'vue'
 import { ValentineGenerator } from '../valentine-generator'
 import { type ValentineProperties } from '../valentine-generator'
 
+const SCRIPT_FILENAME = "shit-valentine.bat"
+
 const properties = ref<ValentineProperties>({
   title: "Will you be my Valentine?",
   agreeButtonText: "Yes",
@@ -21,7 +23,7 @@ function download(): void {
 
   const scriptLinkElement = document.createElement('a')
   scriptLinkElement.href = scriptObjectUrl
-  scriptLinkElement.download = "shit_valentine.bat"
+  scriptLinkElement.download = SCRIPT_FILENAME
 
   document.body.appendChild(scriptLinkElement)
   
